@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/framework-animate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Dancing+Script:wght@500&family=Edu+SA+Beginner&family=Jua&family=Lemon&family=Montserrat:wght@600&family=Oswald&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Wapinstitute</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="500">
+        <nav class="navbar bg-danger navbar-expand-lg fixed-top">
+            <a href="#home" class="navbar-brand text-light">
+                <img src="images/logo.png" alt="logo" width="40">
+                Wapinstitute.com</a>
+                <i id="bars" class="navbar-toggler fa fa-bars" data-toggle="collapse" data-target="#menu"></i>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav topnav">
+                    <li class="nav-item"><a href="#jumbo" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#ser" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#clients" class="nav-link">Clients</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">pricing</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="#account" class="nav-link" data-toggle="modal">Account</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto topnav">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" id="account">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <i class="fa fa-times-circle text-danger" data-dismiss="modal" style="position: absolute;font-size: 20px; top: 10px; right: 10px;z-index:10000;"></i>
+                    <div class="modal-body">
+                       <ul class="nav nav-tabs" id="loginsignup">
+                            <li class="nav-item"><a href="#login" data-toggle="tab" class="nav-link active">Login</a></li>
+                            <li class="nav-item"><a href="#signup" data-toggle="tab" class="nav-link">Signup</a></li>
+                       </ul>
+                       <div class="tab-content" style="overflow: hidden;">
+                            <div class="tab-pane active mt-3 animated slideInDown" id="login">
+                               <form>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" id="username" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control"> 
+                                    </div>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" name="remember" id="rem" class="custom-control-input">
+                                        <label for="rem" class="custom-control-label">Remember Me</label> 
+                                    </div>
+                                    <button type="submit" class="btn btn-primary float-right">Login</button>
+                               </form>
+                               <p style="float: right;clear: right;" class="my-3">Don`t have an account ? <a href="#signup" id="clicksignup">Create Now</a></p>
+                            </div>
+
+                            <div class="tab-pane animated slideInUp" id="signup">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="firstname">Firstname</label>
+                                                <input type="text" name="firstname" id="firstname" class="form-control"> 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender">Gender</label>
+                                                <select class="form-control" name="gender" id="gender">
+                                                    <option>....select....</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="custom">Custom</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile-one">Mobile Number</label>
+                                                <input type="number" name="mob-one" id="mobile-one" class="form-control">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="lastname">Lastname</label>
+                                                <input type="text" name="lastname" id="lastname" class="form-control"> 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dob">Date of Birth</label>
+                                                <input type="date" name="dob" id="dob" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile-two">Alternate Number</label>
+                                                <input type="number" name="mobile-two" id="mobile-two" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="email">Email Id</label>
+                                                <input type="email" name="email" id="email" class="form-control"> 
+                                            </div>
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" name="iagree" id="iagree" class="custom-control-input">
+                                                <label for="iagree" class="custom-control-label">I agree</label> 
+                                            </div>
+                                            <button type="submit" class="btn btn-primary float-right">Signup</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p class="my-3">Already have account ! <a href="#login" id="clicklogin">Login Now</a></p>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid collapse show" id="jumbo">
+            <div class="container text-center" id="home">
+                <h1 class="animated fadeIn">mobile app development</h1>
+                <p class="animated fadeIn slower">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ad praesentium facere est eius, nihil laboriosam illum consequatur repudiandae placeat asperiores natus possimus sint voluptatum et quaerat totam labore? Inventore!</p>
+                <img src="images/mobile.png" alt="mobile" width="70%" class="animated slideInUp">
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid text-center bg-light collapse show" id="ser">
+            <div class="container" id="services">
+                <h1>Services</h1>
+                <div class="row">
+                    <div class="col-md-4 servis">
+                        <div class="code">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h4>welcome to Website</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto quae quis deleniti ea dolorem cumque repellendus iure facilis expedita. Recusandae quam perspiciatis totam voluptates maiores in sit sapiente a?</p>
+                    </div>
+                    <div class="col-md-4 servis">
+                        <div class="code">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h4>welcome to Website</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto quae quis deleniti ea dolorem cumque repellendus iure facilis expedita. Recusandae quam perspiciatis totam voluptates maiores in sit sapiente a?</p>
+                    </div>
+                    <div class="col-md-4 servis">
+                        <div class="code">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h4>welcome to Website</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto quae quis deleniti ea dolorem cumque repellendus iure facilis expedita. Recusandae quam perspiciatis totam voluptates maiores in sit sapiente a?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid text-center collapse show" id="clients">
+            <div class="container wow fadeInUp slower">
+                <h1>Clients</h1>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        <div class="carousel slide" data-ride="carousel" data-interval="3000" id="slider">
+                            <ol class="carousel-indicators">
+                                <li data-target="#slider" class="active" data-slide-to="0"></li>
+                                <li data-target="#slider" data-slide-to="1"></li>
+                                <li data-target="#slider" data-slide-to="2"></li>
+                                <li data-target="#slider" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-9 mx-auto boss">
+                                            <div class="row">
+                                                <div class="col-md-3 my-auto">
+                                                    <div class="img-box">
+                                                        <img src="images/amarkantnirala.jpg" alt="client-pic">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="about">
+                                                        <h4>Amar kant nirala</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia libero <br class="d-none d-lg-block"> officia beatae minus repudiandae saepe!</p> 
+                                                    </div>
+                                                    <div class="social">
+                                                        <i class="fa fa-facebook"></i>
+                                                        <i class="fa fa-linkedin"></i>
+                                                        <i class="fa fa-twitter"></i> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-9 mx-auto boss">
+                                            <div class="row">
+                                                <div class="col-md-3 my-auto">
+                                                    <div class="img-box">
+                                                        <img src="images/amarkantnirala.jpg" alt="client-pic">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="about">
+                                                        <h4>Amar kant nirala</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia libero <br class="d-none d-lg-block"> officia beatae minus repudiandae saepe!</p> 
+                                                    </div>
+                                                    <div class="social">
+                                                        <i class="fa fa-facebook"></i>
+                                                        <i class="fa fa-linkedin"></i>
+                                                        <i class="fa fa-twitter"></i> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-9 mx-auto boss">
+                                            <div class="row">
+                                                <div class="col-md-3 my-auto">
+                                                    <div class="img-box">
+                                                        <img src="images/vikash.jpg" alt="client-pic">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="about">
+                                                        <h4>Vikash kumar</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia libero <br class="d-none d-lg-block"> officia beatae minus repudiandae saepe!</p> 
+                                                    </div>
+                                                    <div class="social">
+                                                        <i class="fa fa-facebook"></i>
+                                                        <i class="fa fa-linkedin"></i>
+                                                        <i class="fa fa-twitter"></i> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-9 mx-auto boss">
+                                            <div class="row">
+                                                <div class="col-md-3 my-auto">
+                                                    <div class="img-box">
+                                                        <img src="images/amarkantnirala.jpg" alt="client-pic">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="about">
+                                                        <h4>Amar kant nirala</h4>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia libero <br class="d-none d-lg-block"> officia beatae minus repudiandae saepe!</p> 
+                                                    </div>
+                                                    <div class="social">
+                                                        <i class="fa fa-facebook"></i>
+                                                        <i class="fa fa-linkedin"></i>
+                                                        <i class="fa fa-twitter"></i> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#slider" class="carousel-control-prev arrow" data-slide="prev" role="button">
+                                <i class="fa fa-chevron-circle-left" style="font-size: 30px;color: red;"></i>
+                            </a>
+                            <a href="#slider" class="carousel-control-next arrow" data-slide="next" role="button">
+                                <i class="fa fa-chevron-circle-right" style="font-size: 30px; color: red;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid bg-light mb-0 collapse show" id="pricing">
+            <h1 class="text-center mb-5" style="text-transform: uppercase;font-family: 'Righteous',sans-serif;">pricing</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 px-5 py-2 wow slideInLeft">
+                        <div class="card text-center">
+                            <div class="card-header bg-danger text-light">STARTER PLAN</div>
+                            <div class="card-body">
+                                <h2><b>$10 / month</b></h2>
+                                <hr>
+                                <span>no service</span>
+                                <hr>
+                                <span>only month service</span>
+                                <hr>
+                                <span>no customer service support</span>
+                                <hr>
+                                <span>only web app development</span>
+                            </div>
+                            <div class="card-footer bg-danger">
+                                <button class="btn"><a class="text-decoration-none text-light" href="#">More info</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 py-2 wow slideInUp">
+                        <div class="card text-center">
+                            <div class="card-header bg-primary text-light">INTERMIDIATE PLAN</div>
+                            <div class="card-body">
+                                <h2><b>$20 / month</b></h2>
+                                <hr>
+                                <span>no service</span>
+                                <hr>
+                                <span>only month service</span>
+                                <hr>
+                                <span>no customer service support</span>
+                                <hr>
+                                <span>only web app development</span>
+                            </div>
+                            <div class="card-footer bg-primary">
+                                <button class="btn"><a class="text-decoration-none text-light" href="#">More info</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 py-2 wow slideInRight">
+                        <div class="card text-center">
+                            <div class="card-header bg-warning text-light">PRO PLAN</div>
+                            <div class="card-body">
+                                <h2><b>$30 / month</b></h2>
+                                <hr>
+                                <span>no service</span>
+                                <hr>
+                                <span>only month service</span>
+                                <hr>
+                                <span>no customer service support</span>
+                                <hr>
+                                <span>only web app development</span>
+                            </div>
+                            <div class="card-footer bg-warning">
+                                <button class="btn"><a class="text-decoration-none text-light" href="#">More info</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid mb-0 bg-warning collapse show pb-2" id="contact">
+            <div class="container-fluid">
+                <h1 class="text-center main-font">Contact</h1>
+                <div class="row">
+                    <div class="col-md-4 px-5 mb-3">
+                        <form class="">
+                            <div class="form-group">
+                                <label for="name">Your name</label>
+                                <input type="text" name="username" id="name" class="form-control"> 
+                            </div>
+                            <div class="form-group">
+                                <label for="number">Mobile No</label>
+                                <input type="number" name="number" id="number" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Id</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                            <button type="button" class="btn btn-primary">Send Us</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4 px-5 mt-3">
+                        <h5 class="mb-0">ADDRESS</h5>
+                        <address>NAWADIH ROHTAS BIHAR 821311</address>
+                        <h5 class="mb-0">CONTACT NUMBER</h5>
+                        <address>+91 9973156836, +91 8873686310</address>
+                        <h5 class="mb-0">WEBSITE</h5>
+                        <address>www.wapinstitute.com</address>
+                        <h5 class="mb-0">EMAIL</h5>
+                        <address>wapinstitute@gmail.com</address>
+                    </div>
+                    <div class="col-md-4 mt-3 px-5">
+                        <h5>FOLLOW US</h5>
+                        <i class="fa fa-facebook bg-light p-2 border border-dark text-primary rounded"></i> 
+                        <i class="fa fa-instagram bg-light p-2 border border-dark text-primary rounded"></i> 
+                        <i class="fa fa-twitter bg-light p-2 border border-dark text-primary rounded"></i> 
+                        <i class="fa fa-linkedin bg-light p-2 border border-dark text-primary rounded"></i> 
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <h6 class="text-black ">Developed by @vikashkumar576</h6>
+                </div> 
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        $(document).ready(function(){
+            $(".navbar ul li a").click(function(event){
+                var href_val = this.hash;
+                event.preventDefault();
+                $("html").animate({
+                    scrollTop:$(href_val).offset().top
+                },1000,function(){
+                    window.location.hash=href_val;
+                });
+            });
+        });
+        
+        </script>
+        <a href="#close" data-toggle="dropdown" class="btn btn-danger pl-4 dropdown-toggle" style="position: fixed; top: 150px; left: -10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;box-shadow: 0px 0px 3px black;">Close</a>
+        <div class="dropdown-menu">
+            <a href="#jumbo" data-toggle="collapse" class="dropdown-item">Home</a>
+            <a href="#ser" class="dropdown-item" data-toggle="collapse">Services</a>
+            <a href="#clients" class="dropdown-item" data-toggle="collapse">Clients</a>
+            <a href="#pricing" class="dropdown-item" data-toggle="collapse">Pricing</a>
+            <a href="#contact" class="dropdown-item" data-toggle="collapse">Contact</a>
+        </div>
+</body>
+</html>

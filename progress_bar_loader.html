@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/framework-animate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Dancing+Script:wght@500&family=Edu+SA+Beginner&family=Jua&family=Lemon&family=Montserrat:wght@600&family=Oswald&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Progress bar and loader</title>
+    <style>
+        .custom-control-label::before{
+            background-color: aliceblue;
+        }
+        .custom-control-input:checked~.custom-control-label::before{
+           background-color:blueviolet;
+           border: 1px solid blueviolet;
+           box-shadow: 0px 0px 4px 1px rgb(188, 155, 218);
+        }
+    </style>
+</head>
+<body>
+    <div class="container pt-5 mx-auto">
+        <div class="progress border border-primary shadow-sm">
+            <div class="progress-bar progress-bar-primary w-50 progress-bar-striped progress-bar-animated"></div>
+        </div>
+    </div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-grow text-warning"></div>
+
+    <div class="modal fade" id="form-dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-light">
+                    <i class="fa fa-newspaper-o" style="font-size: 30px; color: blueviolet;"></i>
+                    <h3 class="mb-0">wapinstitute.com</h3>
+                    <i class="fa fa-close text-danger" data-dismiss="modal"></i>
+                </div>
+                <div class="modal-body">
+                    <h5>Thank You !</h5>
+                    <p>We will you reach you shortly.</p>
+                </div>
+                <div class="modal-footer bg-primary text-light">
+                    <h6 class="mb-0">Powered by vikusaku</h6>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <form>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                </span>  
+            </div>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group">
+            <input type="text" name="" id="" class="form-control">
+            <div class="input-group-append">
+                <span class="input-group-text bg-success text-light">
+                    <i class="fa fa-user"> user</i>
+                </span> 
+            </div>
+        </div>
+    </form>
+    <div class="progress bg-danger">
+        <div class="progress-bar progress-bar-striped progress-bar-animated w-75"></div>
+    </div>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item bg-success text-light">Gender</li>
+        <li class="list-group-item">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="gender" id="male" class="custom-control-input">
+                <label for="male" class="custom-control-label">Male</label>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="gender" id="female" class="custom-control-input">
+                <label for="female" class="custom-control-label">Female</label>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="custom-control custom-radio">
+                <input type="radio" name="gender" id="custom" class="custom-control-input">
+                <label for="custom" class="custom-control-label">Custom</label>
+            </div>
+        </li>
+    </ul>
+    <div class="custom-file">
+        <input type="file" accept="image/*" id="upload" class="custom-file-input">
+        <label for="upload" class="custom-file-label">Choose file</label>
+    </div>
+
+    <!--manual custom file-->
+
+    <div class="input-group">
+        <input type="text" name="text" id="file" placeholder="Choose file" disabled style="background-color: white;" class="form-control">
+        <div class="input-group-append">
+            <span class="input-group-text">Browse</span>
+        </div>
+    </div>
+    <!--form like modal-->
+
+    <div class="container border border-primary">
+        <button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal">modal</button>
+        
+    </div>
+    
+    <!--form like modal-->
+
+
+
+    <!--form like modal-->
+    <script>
+        $(document).ready(function(){
+            $("#upload").on("change",function(){
+                var file_name = this.files[0].name;
+                $(".custom-file-label").html(file_name);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".input-group-text").click(function(){
+                var input = document.createElement("INPUT");
+                input.type = "file";
+                input.accept = "images/*";
+                input.click();
+                input.onchange = function(){
+                    document.querySelector("#file").setAttribute("placeholder",this.files[0].name);
+                }
+            })
+        });
+    </script>
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>hello</p>
+                </div>
+                <div class="modal-body">
+                    <h1>welcome</h1>
+                    <p>hello</p>
+                </div>
+                <div class="modal-footer">
+                    <h6>welcome</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
