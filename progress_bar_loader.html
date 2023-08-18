@@ -154,13 +154,53 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col border">
-            <h1>col-1</h1>
-        </div>
-        <div class="col border">
-            <h1>col-2</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col border">
+                <h1>col-1</h1>
+            </div>
+            <div class="col border">
+                <h1>col-2</h1>
+            </div>
         </div>
     </div>
+    <div class="container">
+        <div class="input-group mt-4">
+            <div class="input-group-prepend">
+                <button class="btn btn-danger" id="undo">Undo</button>
+            </div>
+            <input type="search" name="search" id="search" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="srch">Search</button>
+            </div>
+        </div>
+        <ul class="list-group mb-5 mt-3">
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Ram</li>
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Shyam</li>
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Krishna</li>
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Radha</li>
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Sita</li>
+            <li class="list-group-item "><i class="fa fa-close float-right"></i>Kishori</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#srch").click(function(){
+                var search_val = $("#search").val();
+                $("li").each(function(){
+                    if(this.innerHTML.toLowerCase().indexOf(search_val.toLowerCase()) != -1){
+                        $(this).show();
+                    }
+                    else{
+                        $(this).hide();
+                    }
+                });
+            });
+            $("#undo").click(function(){
+                $("#search").val("");
+                $("#srch").click();
+            });
+        });
+    </script>
 </body>
 </html>
